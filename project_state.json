@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "AI career prediction chatbot website with Internet Identity authentication, beautiful frontend, logo, login/signup functionality, and AI-powered career guidance based on user input",
+  "architectural_notes": [
+    "Frontend built with React and TypeScript (modern alternative to vanilla HTML/CSS/JS)",
+    "Backend uses Motoko on Internet Computer",
+    "Internet Identity for secure passkey-based authentication",
+    "AI career prediction functionality integrated into chat interface"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional logo for career prediction AI platform featuring modern, abstract design elements suggesting growth and future vision (logo.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-internet-identity-authentication-system-with-login-and-signup-functionality-allowing-users-to-authenticate-using-passkeys-or-social-accounts",
+      "title": "Implement Internet Identity authentication system with login and signup functionality allowing users to authenticate using passkeys or social accounts",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-chat-interface-where-authenticated-users-can-input-their-career-ideas-and-questions",
+      "title": "Create a chat interface where authenticated users can input their career ideas and questions",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-beautiful-modern-frontend-with-a-professional-color-scheme-and-typography-that-creates-a-welcoming-trustworthy-atmosphere-for-career-guidance-avoiding-blue-and-purple-tones",
+      "title": "Design a beautiful, modern frontend with a professional color scheme and typography that creates a welcoming, trustworthy atmosphere for career guidance, avoiding blue and purple tones",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-and-display-a-distinctive-logo-for-the-career-prediction-website-that-appears-on-the-landing-page-and-throughout-the-application",
+      "title": "Create and display a distinctive logo for the career prediction website that appears on the landing page and throughout the application",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-generated-logo-and-any-supporting-visual-assets-as-static-files-in-the-frontend-public-assets-directory",
+      "title": "Integrate generated logo and any supporting visual assets as static files in the frontend public assets directory",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Beautiful frontend UI with logo and branding",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "User authentication with Internet Identity (login/signup)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "AI-powered career prediction chatbot interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Chat interface for users to input career ideas and receive AI predictions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement backend logic to process career-related questions and generate AI-powered future predictions and career guidance based on user input",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "AI Career Prediction Chatbot",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

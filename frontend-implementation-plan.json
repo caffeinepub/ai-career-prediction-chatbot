@@ -1,0 +1,166 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Career Predictor AI - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement Internet Identity authentication with login/signup allowing users to authenticate using passkeys or social accounts",
+      "acceptanceCriteria": [
+        "Users can sign up using Internet Identity",
+        "Users can log in using Internet Identity",
+        "Authentication state persists across sessions",
+        "Unauthenticated users are prompted to log in before accessing chat features"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/LoginButton.tsx",
+          "operation": "create",
+          "description": "Create login/logout button component that uses the authorization component's Internet Identity integration. Handle login, logout, and display appropriate button states. On logout, clear React Query cache to remove all cached application data including user profiles."
+        },
+        {
+          "path": "frontend/src/components/AuthGuard.tsx",
+          "operation": "create",
+          "description": "Create authentication guard component that prevents unauthenticated users from accessing chat features. Display login prompt for unauthenticated users. Use the authorization component to check authentication state."
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupModal.tsx",
+          "operation": "create",
+          "description": "Create modal component for first-time user profile setup that asks for the user's name. Use getCallerUserProfile and saveCallerUserProfile from the authorization component. Implement loading state handling to prevent modal flash as described in the authorization component usage instructions. Only show when user is authenticated but has no profile."
+        },
+        {
+          "path": "frontend/src/hooks/useGetCallerUserProfile.ts",
+          "operation": "create",
+          "description": "Create React Query hook to fetch current user profile using getCallerUserProfile. Implement proper loading state management that accounts for actor dependency to prevent profile setup modal flash, following the authorization component's usage pattern exactly."
+        },
+        {
+          "path": "frontend/src/hooks/useSaveCallerUserProfile.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook to save current user profile using saveCallerUserProfile from the authorization component."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate LoginButton, AuthGuard, and ProfileSetupModal components. Wrap chat interface with AuthGuard to ensure only authenticated users can access it. Display ProfileSetupModal when authenticated user has no profile. Verify the authorization component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create chat interface where authenticated users can input career ideas and questions",
+      "acceptanceCriteria": [
+        "Chat interface displays user messages and AI responses",
+        "Users can type and submit career-related questions",
+        "Chat history is visible in a scrollable conversation view",
+        "Interface clearly distinguishes between user and AI messages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ChatInterface.tsx",
+          "operation": "create",
+          "description": "Create main chat interface component with scrollable conversation view displaying message history. Distinguish between user and AI messages visually. Include input field and send button for submitting career questions. Handle loading states during AI response generation."
+        },
+        {
+          "path": "frontend/src/components/ChatMessage.tsx",
+          "operation": "create",
+          "description": "Create individual chat message component that renders user or AI messages with appropriate styling and layout to clearly distinguish message types."
+        },
+        {
+          "path": "frontend/src/components/ChatInput.tsx",
+          "operation": "create",
+          "description": "Create chat input component with textarea for typing career questions and submit button. Handle enter key submission and disable during loading states."
+        },
+        {
+          "path": "frontend/src/hooks/useGetCareerPrediction.ts",
+          "operation": "create",
+          "description": "Create React Query mutation hook to call getCareerPrediction backend function with user's career question and receive AI-powered prediction response containing strengths, weaknesses, careerPaths, and advice fields."
+        },
+        {
+          "path": "frontend/src/types/chat.ts",
+          "operation": "create",
+          "description": "Define TypeScript types for chat messages including message role (user/assistant), content, and timestamp. Define type for career prediction response structure."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ChatInterface component into the authenticated application view so it appears after successful login and profile setup."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Design beautiful, modern frontend with professional color scheme and typography creating welcoming, trustworthy atmosphere for career guidance, avoiding blue and purple tones",
+      "acceptanceCriteria": [
+        "UI uses a cohesive, modern color palette that conveys professionalism",
+        "Typography is clean and readable",
+        "Layout is intuitive and user-friendly",
+        "Design creates a welcoming atmosphere appropriate for career counseling"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles with professional color scheme avoiding blue and purple. Use warm, trustworthy colors like amber, emerald, or slate tones. Define CSS custom properties for primary, secondary, and accent colors. Ensure typography is clean and readable with appropriate font families, sizes, and spacing."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind theme with professional color palette that avoids blue and purple tones. Extend theme with custom colors, typography settings, and spacing that create a welcoming, trustworthy atmosphere appropriate for career guidance. Use warm and neutral tones."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create main layout component with consistent header, navigation, and content areas. Apply cohesive styling that reflects the professional color scheme and creates an intuitive, user-friendly structure for the career guidance application."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap application content with Layout component to ensure consistent design system application across all views."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create and display distinctive logo for career prediction website appearing on landing page and throughout application",
+      "acceptanceCriteria": [
+        "Logo is prominently displayed on the landing page",
+        "Logo appears in the navigation or header area",
+        "Logo design is professional and relevant to career guidance",
+        "Logo is consistently sized and positioned across pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Logo.tsx",
+          "operation": "create",
+          "description": "Create Logo component that displays the generated logo image from frontend/public/assets/generated/logo.dim_400x400.png. Component should accept size props for consistent sizing across different contexts (header, landing page)."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Integrate Logo component in the header/navigation area of the layout. Ensure logo is prominently displayed and consistently positioned across all pages."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Display Logo component prominently on the landing page view (shown to unauthenticated users) with appropriate sizing for maximum visual impact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Integrate generated logo and supporting visual assets as static files in frontend public assets directory",
+      "acceptanceCriteria": [
+        "Generated images are stored in frontend/public/assets/generated",
+        "Images are properly referenced in frontend components",
+        "Images load correctly in the browser"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Logo.tsx",
+          "operation": "modify",
+          "description": "Reference the generated logo file at frontend/public/assets/generated/logo.dim_400x400.png using the correct public asset path. Ensure image loads properly with appropriate alt text for accessibility."
+        }
+      ]
+    }
+  ]
+}

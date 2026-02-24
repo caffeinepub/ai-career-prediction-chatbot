@@ -1,0 +1,140 @@
+{
+  "kind": "build_request",
+  "title": "Build AI career prediction chatbot with Internet Identity authentication",
+  "projectName": "Career Predictor AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement Internet Identity authentication system with login and signup functionality allowing users to authenticate using passkeys or social accounts",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1",
+          "msg-5"
+        ],
+        "quotes": [
+          "login details should be placed so the user can login or signup",
+          "build with internet identity authentication"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can sign up using Internet Identity",
+        "Users can log in using Internet Identity",
+        "Authentication state persists across sessions",
+        "Unauthenticated users are prompted to log in before accessing chat features"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a chat interface where authenticated users can input their career ideas and questions",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "ai chat box, where we give our ideas about our career"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat interface displays user messages and AI responses",
+        "Users can type and submit career-related questions",
+        "Chat history is visible in a scrollable conversation view",
+        "Interface clearly distinguishes between user and AI messages"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement backend logic to process career-related questions and generate AI-powered future predictions and career guidance based on user input",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "it gives the output using future predictions",
+          "AI-powered career prediction chatbot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend receives user career questions",
+        "Backend generates relevant career predictions and guidance",
+        "Responses are contextual and related to the user's input",
+        "Backend stores chat history per authenticated user"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Design a beautiful, modern frontend with a professional color scheme and typography that creates a welcoming, trustworthy atmosphere for career guidance, avoiding blue and purple tones",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "the front end shoule be very beautiful"
+        ]
+      },
+      "acceptanceCriteria": [
+        "UI uses a cohesive, modern color palette that conveys professionalism",
+        "Typography is clean and readable",
+        "Layout is intuitive and user-friendly",
+        "Design creates a welcoming atmosphere appropriate for career counseling"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create and display a distinctive logo for the career prediction website that appears on the landing page and throughout the application",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "front end website should have some logo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Logo is prominently displayed on the landing page",
+        "Logo appears in the navigation or header area",
+        "Logo design is professional and relevant to career guidance",
+        "Logo is consistently sized and positioned across pages"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Integrate generated logo and any supporting visual assets as static files in the frontend public assets directory",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are stored in frontend/public/assets/generated",
+        "Images are properly referenced in frontend components",
+        "Images load correctly in the browser"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use React with TypeScript for frontend, not vanilla HTML/CSS/JavaScript",
+    "Use Motoko for backend implementation",
+    "Use Internet Identity for authentication, not email-based verification",
+    "Do not attempt to integrate external AI APIs or LLM services"
+  ],
+  "nonGoals": [
+    "Email verification code system",
+    "Email-based authentication",
+    "Integration with external AI services like OpenAI or Anthropic",
+    "Real-time WebSocket chat functionality",
+    "Mobile app development"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional logo for career prediction AI platform featuring modern, abstract design elements suggesting growth and future vision (logo.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}

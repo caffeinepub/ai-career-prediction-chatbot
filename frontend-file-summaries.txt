@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component that handles authentication state, profile setup flow, and renders either the landing page or authenticated chat interface based on user status.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component providing consistent header with logo and login button, main content area, and footer with attribution across authenticated pages.",
+  "frontend/src/components/LandingPage.tsx": "Landing page component for unauthenticated users featuring hero section with logo, value proposition, call-to-action, and feature cards highlighting AI career guidance benefits.",
+  "frontend/src/components/Logo.tsx": "Reusable logo component that displays the generated logo image with configurable sizes (sm, md, lg) for use across different contexts.",
+  "frontend/src/components/LoginButton.tsx": "Authentication button component that handles Internet Identity login/logout with loading states and appropriate icons using the useInternetIdentity hook.",
+  "frontend/src/components/ProfileSetupModal.tsx": "Modal dialog for first-time user profile setup that collects user's name and saves it using the authorization component's profile management.",
+  "frontend/src/components/ChatInterface.tsx": "Main chat interface component managing conversation state, displaying messages, handling career prediction requests, and showing welcome screen with suggestion cards.",
+  "frontend/src/components/ChatMessage.tsx": "Individual chat message component that renders user or AI messages with distinct styling, avatars, timestamps, and formatted content including markdown-style bold text.",
+  "frontend/src/components/ChatInput.tsx": "Chat input component with textarea for typing messages and send button, supporting Enter key submission and disabled states during processing.",
+  "frontend/src/hooks/useGetCallerUserProfile.ts": "React Query hook for fetching current user's profile with proper loading state management to prevent modal flash during initialization.",
+  "frontend/src/hooks/useSaveCallerUserProfile.ts": "React Query mutation hook for saving user profile data and invalidating profile cache on success.",
+  "frontend/src/hooks/useGetCareerPrediction.ts": "React Query mutation hook for calling backend career prediction API with user questions and receiving structured career guidance.",
+  "frontend/src/types/chat.ts": "TypeScript type definitions for chat messages and career prediction response structure.",
+  "frontend/src/index.css": "Global styles with OKLCH color system using warm amber/orange tones for primary colors, avoiding blue and purple, with comprehensive light and dark mode support.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with warm amber/orange color palette, custom fonts (Inter, Lexend), varied border radii, and soft shadows for professional career guidance aesthetic."
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-internet-identity-authentication-system-with-login-and-signup-functionality-allowing-users-to-authenticate-using-passkeys-or-social-accounts",
+      "featureTitle": "Implement Internet Identity authentication system with login and signup functionality allowing users to authenticate using passkeys or social accounts",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/LoginButton.tsx",
+        "frontend/src/components/ProfileSetupModal.tsx",
+        "frontend/src/hooks/useGetCallerUserProfile.ts",
+        "frontend/src/hooks/useSaveCallerUserProfile.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-chat-interface-where-authenticated-users-can-input-their-career-ideas-and-questions",
+      "featureTitle": "Create a chat interface where authenticated users can input their career ideas and questions",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ChatInput.tsx",
+        "frontend/src/components/ChatInterface.tsx",
+        "frontend/src/components/ChatMessage.tsx",
+        "frontend/src/hooks/useGetCareerPrediction.ts",
+        "frontend/src/types/chat.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-beautiful-modern-frontend-with-a-professional-color-scheme-and-typography-that-creates-a-welcoming-trustworthy-atmosphere-for-career-guidance-avoiding-blue-and-purple-tones",
+      "featureTitle": "Design a beautiful, modern frontend with a professional color scheme and typography that creates a welcoming, trustworthy atmosphere for career guidance, avoiding blue and purple tones",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-and-display-a-distinctive-logo-for-the-career-prediction-website-that-appears-on-the-landing-page-and-throughout-the-application",
+      "featureTitle": "Create and display a distinctive logo for the career prediction website that appears on the landing page and throughout the application",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/Logo.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-generated-logo-and-any-supporting-visual-assets-as-static-files-in-the-frontend-public-assets-directory",
+      "featureTitle": "Integrate generated logo and any supporting visual assets as static files in the frontend public assets directory",
+      "files": [
+        "frontend/src/components/Logo.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
